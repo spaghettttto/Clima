@@ -12,3 +12,7 @@ else:
     clasificacion = "Frío"
 
 print(clasificacion)
+
+print(f"Temperatura: {temperatura}")
+print(f"Humedad: {humedad}")
+print(f"Lluvia: {llueve}")
