@@ -1,7 +1,3 @@
-temperatura = 28
-humedad = 60
-llueve = True
-
 if temperatura >= 30:
     if humedad >= 70:
         clasificacion = "Calor húmedo"
