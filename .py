@@ -1,3 +1,11 @@
+import streamlit as st
+
+st.title("Clasificador de Clima")
+
+temperatura = st.slider("Temperatura (°C)", min_value=-10, max_value=50, value=25)
+humedad = st.slider("Humedad (%)", min_value=0, max_value=100, value=50)
+llueve = st.checkbox("¿Está lloviendo?")
+
 if temperatura >= 30:
     if humedad >= 70:
         clasificacion = "Calor húmedo"
@@ -11,10 +19,9 @@ elif temperatura >= 15:
 else:
     clasificacion = "Frío"
 
-print(clasificacion)
+st.subheader("Resultado")
+st.info(f"Clasificación: **{clasificacion}**")
 
-print(f"Temperatura: {temperatura}")
-print(f"Humedad: {humedad}")
-print(f"Lluvia: {llueve}")
-bottom()
-
+st.write(f"**Temperatura:** {temperatura} °C")
+st.write(f"**Humedad:** {humedad}%")
+st.write(f"**Lluvia:** {'Sí' if llueve else 'No'}")
